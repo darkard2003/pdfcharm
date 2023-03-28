@@ -29,7 +29,9 @@ def compress_folder(in_path: str = "./pdfin", out_path: str = "./compressed"):
         compress_pdf(pdf_file, out_path)
 
 
-def merge_folder(in_path: str, out_name: str, out_path: str = "./merged"):
+def merge_folder(
+    out_name: str, in_path: str = "./compressed/", out_path: str = "./merged"
+):
     if not os.path.exists(out_path):
         os.mkdir(out_path)
 
